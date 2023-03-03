@@ -44,7 +44,7 @@ Compiler::Compiler(VM* vm, const SourceCode& src) : m_vm{vm}, m_source{&src} {
 Compiler::Compiler(VM* vm, Compiler* parent, String* name) : m_vm{vm}, m_parent{parent} {
 	m_scanner = m_parent->m_scanner;
 	m_codeblock = &m_vm->make<CodeBlock>(name);
-
+    
 	m_symtable.add(name->c_str(), name->len(), false);
 
 	m_source = parent->m_source;

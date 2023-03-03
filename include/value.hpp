@@ -86,6 +86,11 @@ struct Value {
 		VYSE_ASSERT(o != nullptr, "Unexpected nullptr object");
 	}
 
+  Value(Value&& value) = default;
+  Value& operator=(Value&& value) = default;
+  Value (Value& value) = default;
+  Value& operator=(Value& value) = default;
+
 	static inline constexpr Value undefined() noexcept {
 		Value undef;
 		undef.tag = ValueType::Undefined;
