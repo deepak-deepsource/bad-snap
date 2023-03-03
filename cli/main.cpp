@@ -68,6 +68,7 @@ static void info() {
 }
 
 int main(int const argc, char** const argv) {
+  void* x = malloc(123);
 	if (argc == 1) {
 		repl();
 	} else if (argc == 2) {
