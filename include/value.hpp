@@ -89,7 +89,7 @@ struct Value {
   Value(Value&& value) = default;
   Value& operator=(Value&& value) = default;
   Value (Value const& value) = default;
-  Value& operator=(Value& value) = default;
+  Value& operator=(Value const& value) = default;
 
 	static inline constexpr Value undefined() noexcept {
 		Value undef;
