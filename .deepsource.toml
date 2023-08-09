@@ -3,6 +3,9 @@ version = 1
 [[analyzers]]
 name = "cxx"
 
+  [analyzers.meta]
+  cpp_version = "c++17"
+
 [[analyzers]]
 name = "python"
 
